@@ -1,4 +1,4 @@
-Most of this code came from [slim-config-yaml](https://github.com/techsterx/slim-config-yaml). Gave me an awesome start on this. I've basically just removed the Slim dependency and created a way to get the YAML values directly.
+A huge majority of this code came from [slim-config-yaml](https://github.com/techsterx/slim-config-yaml). I've basically just removed the Slim dependency and created a way to get the YAML values directly.
 
 Parses YAML files.
 Uses Symfony's YAML Component to parse files (http://github.com/symfony/Yaml).
