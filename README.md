@@ -10,46 +10,21 @@ Allows other YAML files to be imported and parameters to be set and used.
 
 #### Composer
 
-Install composer in your project.
-```
-curl -s https://getcomposer.org/installer | php
-```
-Create a ```composer.json``` file in your project root:
+Be sure you have composer installed and pathed.
+
+Add the following to your composer.json:
 ```
 {
 	"require": {
-		"mindfullsilence/yamloader": "dev-master@dev"
+		"mindfullsilence/yamlloader": "dev-master@dev"
 	},
 	"repositories": [
 		{
 		  "type": "vcs",
-		  "url": "https://github.com/mindfullsilence/yamloader"
+		  "url": "https://github.com/mindfullsilence/yamlloader"
 		}
 	]
 }
-```
-Install via composer in terminal:
-```
-php composer.phar install
-```
-Add this line to your applications ```index.php``` file:
-```php
-<?php
-require 'vendor/autoload.php';
-```
-
-#### Manual Install
-
-Download and extract src/ directory into your project directory and ```require``` it in your
-application's ```index.php``` file.
-```php
-<?php
-require 'Yaml.php';
-
-$yamlLoader = new \Mindfullsilence\YamlLoader();
-$yamlLoader->addFile('/path/to/some/file.yaml');
-$result = $yamlLoader->getConfig();
-print_r($result);
 ```
 
 ### Methods
@@ -158,7 +133,7 @@ print_r($db_config);
 ```
 
 Output:
-```
+```php
 Array
 (
     [hostname] => localhost
